@@ -1,0 +1,22 @@
+image: node:4.2.2
+
+stages:
+  - setup
+  - deploy
+
+setup:
+  stage: setup
+  script:
+    - npm install
+
+deploy_ui_to_staging:
+  stage: deploy
+  environment: Development
+  services:
+       - docker:dind
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - docker build -t registry.gitlab.com/reallybigtree/pinecone-models .
+    - docker push registry.gitlab.com/reallybigtree/pinecone-models
+  only:
+    - develop

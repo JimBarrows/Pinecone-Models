@@ -10,10 +10,18 @@ var WordPressDestination = new Schema({
 	url: Types.String
 });
 
+var FacebookDestination = new Schema({
+	accessToken: Types.String,
+	expiresIn: Types.Date,
+	signedRequest: Types.String,
+	userId: Types.String
+});
+
 var Channel = new Schema({
 	name: Types.String,
 	owner: Types.ObjectId,
-	wordPressDestinations: [WordPressDestination]
+	wordPressDestinations: [WordPressDestination],
+	facebookDestinations: [FacebookDestination]
 });
 
 module.exports = mongoose.model('Channel', Channel);

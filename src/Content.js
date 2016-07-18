@@ -30,5 +30,6 @@ const Content = new Schema({
 	transmissionReports: [TransmissionReport]
 });
 
-Content.methods.failedTransmissionReportsFor = (channelId) =>this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
+Content.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
+
 module.exports                               = mongoose.model('Content', Content);

@@ -17,11 +17,17 @@ var FacebookDestination = new Schema({
 	userId: Types.String
 });
 
+var TwitterDestination = new Schema({
+	access_token_key: Types.String,
+	access_token_secret: Types.String
+});
+
 var Channel = new Schema({
 	name: Types.String,
 	owner: Types.ObjectId,
 	wordPressDestinations: [WordPressDestination],
-	facebookDestinations: [FacebookDestination]
+	facebookDestinations: [FacebookDestination],
+	twitterDestinations: [TwitterDestination]
 });
 
 module.exports = mongoose.model('Channel', Channel);

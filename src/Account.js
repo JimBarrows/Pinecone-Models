@@ -1,7 +1,6 @@
 'use strict';
-const mongoose              = module.parent.mongoose,
-      Schema                = mongoose.Schema,
-      passportLocalMongoose = require('passport-local-mongoose');
+const mongoose              = module.parent.mongoose;
+const passportLocalMongoose = require('passport-local-mongoose');
 
 var Account = new Schema({
 	// username: Types.String,

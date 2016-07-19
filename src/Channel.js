@@ -11,6 +11,8 @@ var WordPressDestination = new Schema({
 });
 
 var FacebookDestination = new Schema({
+	name: Types.String,
+	email: Types.String,
 	accessToken: Types.String,
 	expiresIn: Types.Date,
 	signedRequest: Types.String,

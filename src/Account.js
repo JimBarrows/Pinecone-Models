@@ -1,7 +1,8 @@
 'use strict';
 console.log('Required by ' + module.parent.filename);
 console.log('module.parent: ', module.parent);
-const mongoose              = module.parent.mongoose;
+const db                    = module.parent.db;
+const mongoose              = require('mongoose');
 const Schema                = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');
 

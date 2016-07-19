@@ -1,5 +1,5 @@
 'use strict';
-const mongoose = require('mongoose'),
+const mongoose = module.parent.mongoose,
       Schema   = mongoose.Schema,
       Types    = Schema.Types;
 

@@ -1,5 +1,5 @@
 'use strict';
-const mongoose = require('mongoose'),
+const mongoose = module.parent.mongoose,
       Schema   = mongoose.Schema,
       Types    = mongoose.Schema.Types;
 
@@ -32,4 +32,4 @@ const Content = new Schema({
 
 Content.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
 
-module.exports                               = mongoose.model('Content', Content);
+module.exports = mongoose.model('Content', Content);

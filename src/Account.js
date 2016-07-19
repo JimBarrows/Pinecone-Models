@@ -6,8 +6,8 @@ const mongoose              = require('mongoose'),
 
 console.log("Account schema");
 var Account = new Schema({
-	username: Types.String,
-	password: Types.String
+	// username: Types.String,
+	// password: Types.String
 });
 
 Account.plugin(passportLocalMongoose);

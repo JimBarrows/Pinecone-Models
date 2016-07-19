@@ -7,8 +7,9 @@ const mongoose = require('mongoose')
 		, Promise  = require('bluebird');
 
 mongoose.Promise  = Promise;
-const db          = mongoose.connect('mongodb://mongo/pinecone');
-module.exports.db = db;
+mongoose.connect('mongodb://mongo/pinecone');
+
+module.exports.mongoose = mongoose;
 
 var Account = require('./Account');
 var Content = require('./Content');

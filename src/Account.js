@@ -1,6 +1,4 @@
 'use strict';
-console.log('Required by ' + module.parent.filename);
-console.log('module.parent: ', module.parent);
 const db                    = module.parent.db,
       mongoose              = require('mongoose'),
       Schema                = mongoose.Schema,

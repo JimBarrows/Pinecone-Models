@@ -1,5 +1,6 @@
 'use strict';
-const mongoose = module.parent.mongoose,
+const db       = module.parent.db,
+      mongoose = require('mongoose'),
       Schema   = mongoose.Schema,
       Types    = Schema.Types;
 
@@ -30,4 +31,4 @@ var Channel = new Schema({
 	twitterDestinations: [TwitterDestination]
 });
 
-module.exports = mongoose.model('Channel', Channel);
+module.exports = db.model('Channel', Channel);

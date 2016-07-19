@@ -1,16 +1,13 @@
 'use strict';
 console.log('Required by ' + module.parent.filename);
 console.log('module.parent: ', module.parent);
-const db                    = module.parent.db;
-const mongoose              = require('mongoose');
-const Schema                = mongoose.Schema;
-const passportLocalMongoose = require('passport-local-mongoose');
+const db                    = module.parent.db,
+      mongoose              = require('mongoose'),
+      Schema                = mongoose.Schema,
+      passportLocalMongoose = require('passport-local-mongoose');
 
-var Account = new Schema({
-	// username: Types.String,
-	// password: Types.String
-});
+var Account = new Schema({});
 
 Account.plugin(passportLocalMongoose);
 
-module.exports = mongoose.model('Account', Account);
+module.exports = db.model('Account', Account);

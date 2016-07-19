@@ -1,6 +1,6 @@
 'use strict';
-const mongoose              = module.parent.mongoose,
-      // mongoose              = require('mongoose'),
+const //mongoose              = module.parent.mongoose,
+		mongoose                = require('mongoose'),
       Schema                = mongoose.Schema,
       passportLocalMongoose = require('passport-local-mongoose');
 

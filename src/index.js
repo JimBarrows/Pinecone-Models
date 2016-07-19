@@ -2,7 +2,6 @@
  * Created by JimBarrows on 7/18/16.
  */
 'use strict';
-console.log('Required by ' + module.parent.filename);
 const mongoose = require('mongoose')
 		, Promise  = require('bluebird');
 

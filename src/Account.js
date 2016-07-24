@@ -5,7 +5,9 @@ const mongoose              = require('mongoose'),
       passportLocalMongoose = require('passport-local-mongoose');
 
 var Account = new Schema({
-	facebookUserId: Types.String
+	facebookUserId: Types.String,
+	accessToken: Types.String,
+	expiresIn: Types.Date
 });
 
 Account.plugin(passportLocalMongoose);

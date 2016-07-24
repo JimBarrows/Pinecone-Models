@@ -12,7 +12,8 @@ var WordPressDestination = new Schema({
 
 var FacebookDestination = new Schema({
 	name: Types.String,
-	pageId: Types.String
+	pageId: Types.String,
+	accessToken: Types.String
 });
 
 var TwitterDestination = new Schema({

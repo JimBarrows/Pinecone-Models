@@ -15,7 +15,8 @@ const TransmissionReport = new Schema({
 	timeStart: Types.Date,
 	timeEnd: Types.Date,
 	status: Types.String,
-	error: Types.String
+	error: Types.String,
+	destinationId: Types.String
 });
 
 const Content = new Schema({

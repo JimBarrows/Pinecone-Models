@@ -3,11 +3,24 @@
   "version" : "1.0.0",
   "description" : "Mongoose models for Pincecone",
   "main" : "index.js",
+  "bugs" : {
+	"url" : "https://gitlab.com/ReallyBigTree/Pinecone-Models/issues",
+	"email" : "jim@reallybigtree.com"
+  },
   "scripts" : {
 	"test" : "echo \"Error: no test specified\" && exit 1"
   },
-  "author" : "",
-  "license" : "ISC",
+  "author" : {
+	"name" : "Jim Barrows",
+	"email" : "jim@reallybigtree.com"
+  },
+  "contributors" : [],
+  "license" : "UNLICENSED",
+  "private" : true,
+  "repository" : {
+	"type" : "git",
+	"url" : "https://gitlab.com/ReallyBigTree/Pinecone-Models/tree/master"
+  },
   "dependencies" : {
 	"babel-cli" : "^6.10.1",
 	"babel-core" : "^6.10.4",

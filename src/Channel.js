@@ -17,10 +17,10 @@ var FacebookDestination = new Schema({
 });
 
 var TwitterDestination = new Schema({
-	name: Types.String,
-	oauthToken: Types.String,
-	oauthVerifier: Types.String,
-	accessToken: Types.String
+	ownerId: Types.String,
+	owner: Types.String,
+	accessToken: Types.String,
+	accessTokenSecret: Types.String
 });
 
 var Channel = new Schema({

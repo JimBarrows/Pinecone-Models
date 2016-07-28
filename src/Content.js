@@ -9,6 +9,10 @@ const WordPressFields = new Schema({
 	format: Types.String
 });
 
+const TwitterFields = new Schema({
+	status: Types.String
+})
+
 const TransmissionReport = new Schema({
 	channel: Types.ObjectId,
 	destination: Types.ObjectId,
@@ -28,6 +32,7 @@ const Content = new Schema({
 	slug: Types.String,
 	title: Types.String,
 	wpFields: WordPressFields,
+	twitter: TwitterFields,
 	transmissionReports: [TransmissionReport]
 });
 

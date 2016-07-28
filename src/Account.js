@@ -8,8 +8,7 @@ const mongoose              = require('mongoose'),
 var Account = new Schema({
 	facebookUserId: Types.String,
 	accessToken: Types.String,
-	expiresIn: Types.Date,
-	twitterAccounts: [TwitterAccount]
+	expiresIn: Types.Date
 });
 
 Account.plugin(passportLocalMongoose);

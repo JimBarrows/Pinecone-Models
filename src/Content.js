@@ -10,8 +10,16 @@ const WordPressFields = new Schema({
 });
 
 const TwitterFields = new Schema({
-	status: Types.String
-})
+	status: Types.String,
+	useTitle: {
+		type: Types.Boolean, default: true
+	}
+});
+
+const FacebookFields = new Schema({
+	post: Types.string,
+	useBody: {type: Types.Boolean, default: true}
+});
 
 const TransmissionReport = new Schema({
 	channel: Types.ObjectId,
@@ -27,13 +35,14 @@ const Content = new Schema({
 	body: Types.String,
 	channel: Types.ObjectId,
 	createDate: Types.Date,
+	facebook: FacebookFields,
 	owner: Types.ObjectId,
 	publishDate: Types.Date,
 	slug: Types.String,
 	title: Types.String,
-	wpFields: WordPressFields,
+	transmissionReports: [TransmissionReport],
 	twitter: TwitterFields,
-	transmissionReports: [TransmissionReport]
+	wordpress: WordPressFields
 });
 
 Content.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');

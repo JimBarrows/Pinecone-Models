@@ -9,7 +9,7 @@ const WordPressFields = new Schema({
 	format: Types.String,
 	useBody: {type: Types.Boolean, default: true},
 	count: {type: Types.Number, default: 140},
-	typeToCount: {type: Types.String, enum: ['characters, words, sentences'], default: 'characters'}
+	typeToCount: {type: Types.String, enum: ['characters', 'words', 'sentences'], default: 'characters'}
 });
 
 const TwitterFields = new Schema({

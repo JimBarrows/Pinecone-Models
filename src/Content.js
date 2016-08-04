@@ -6,7 +6,10 @@ const mongoose = require('mongoose'),
 const WordPressFields = new Schema({
 	excerpt: Types.String,
 	status: Types.String,
-	format: Types.String
+	format: Types.String,
+	useBody: {type: Types.Boolean, default: true},
+	count: {type: Types.Number, default: 140},
+	typeToCount: {type: Types.String, enum: ['characters, words, sentences'], default: 'characters'}
 });
 
 const TwitterFields = new Schema({
@@ -17,7 +20,7 @@ const TwitterFields = new Schema({
 });
 
 const FacebookFields = new Schema({
-	post: Types.string,
+	post: Types.String,
 	useBody: {type: Types.Boolean, default: true}
 });
 

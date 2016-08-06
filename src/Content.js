@@ -45,7 +45,7 @@ const Content = new Schema({
 	title: Types.String,
 	transmissionReports: [TransmissionReport],
 	twitter: TwitterFields,
-	wordpress: WordPressFields
+	wordPress: WordPressFields
 });
 
 Content.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');

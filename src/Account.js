@@ -3,12 +3,14 @@ const mongoose              = require('mongoose'),
       Schema                = mongoose.Schema,
       Types                 = Schema.Types,
       passportLocalMongoose = require('passport-local-mongoose');
+import TwitterChannel from "./TwitterChannel";
 
 
 var Account = new Schema({
 	facebookUserId: Types.String,
 	accessToken: Types.String,
-	expiresIn: Types.Date
+	expiresIn: Types.Date,
+	twitterChannels: [TwitterChannel]
 });
 
 Account.plugin(passportLocalMongoose);

@@ -2,8 +2,8 @@
 const mongoose              = require('mongoose'),
       Schema                = mongoose.Schema,
       Types                 = Schema.Types,
-      passportLocalMongoose = require('passport-local-mongoose');
-import TwitterChannel from "./TwitterChannel";
+      passportLocalMongoose = require('passport-local-mongoose'),
+      TwitterChannel        = require("./TwitterChannel");
 
 
 var Account = new Schema({

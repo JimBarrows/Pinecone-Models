@@ -1,8 +1,8 @@
 'use strict';
-const mongoose = require('mongoose'),
-      Schema   = mongoose.Schema,
-      Types    = Schema.Types;
-import TwitterChannel from "./TwitterChannel";
+const mongoose       = require('mongoose'),
+      Schema         = mongoose.Schema,
+      Types          = Schema.Types,
+      TwitterChannel = require("./TwitterChannel");
 
 var WordPressDestination = new Schema({
 	name: Types.String,

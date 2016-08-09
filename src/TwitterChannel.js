@@ -2,9 +2,9 @@
  * Created by JimBarrows on 8/6/16.
  */
 'use strict';
-import mongoose from "mongoose";
-const Schema = mongoose.Schema;
-const Types  = Schema.Types;
+const mongoose = require('mongoose'),
+      Schema   = mongoose.Schema,
+      Types    = Schema.Types;
 
 
 const TwitterChannel = new Schema({

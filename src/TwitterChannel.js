@@ -7,7 +7,7 @@ const mongoose = require('mongoose'),
       Types    = Schema.Types;
 
 
-const TwitterChannel = new Schema({
+export var TwitterChannel = new Schema({
 	accessToken: Types.String,
 	accessTokenSecret: Types.String,
 	name: Types.String,
@@ -15,4 +15,3 @@ const TwitterChannel = new Schema({
 	owner: Types.String
 });
 
-export default TwitterChannel;

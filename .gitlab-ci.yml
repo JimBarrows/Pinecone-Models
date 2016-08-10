@@ -6,6 +6,7 @@ build_dev:
   script:
     - npm install
     - npm pack
+  environment: master
 
 build_release:
   stage: build
@@ -13,3 +14,4 @@ build_release:
     - npm install --production
     - npm shrinkwrap
     - npm pack
+  environment: release

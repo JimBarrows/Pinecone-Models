@@ -10,6 +10,8 @@ cache:
 build_dev:
   stage: build
   environment: master
+  only:
+    - master
   script:
     - npm install
     - npm pack
@@ -20,6 +22,8 @@ build_dev:
 build_release:
   stage: build
   environment: release
+  only:
+    - release
   script:
     - npm install --production
     - npm shrinkwrap

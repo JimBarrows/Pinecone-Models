@@ -1,5 +1,5 @@
 {
-  "name" : "pinecone-models",
+  "name" : "@reallybigtree/pinecone-models",
   "version" : "1.0.0",
   "description" : "Mongoose models for Pincecone",
   "main" : "index.js",
@@ -16,7 +16,6 @@
   },
   "contributors" : [],
   "license" : "UNLICENSED",
-  "private" : true,
   "repository" : {
 	"type" : "git",
 	"url" : "https://gitlab.com/ReallyBigTree/Pinecone-Models/tree/master"

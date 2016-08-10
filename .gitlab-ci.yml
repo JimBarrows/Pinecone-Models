@@ -1,17 +1,30 @@
+image: node:4.2.2
+
 stages:
   - build
 
+cache:
+  paths:
+  - node_modules/
+
 build_dev:
   stage: build
+  environment: master
   script:
     - npm install
     - npm pack
-  environment: master
+  artifacts:
+    paths:
+      untracked: true
+
 
 build_release:
   stage: build
+  environment: release
   script:
     - npm install --production
     - npm shrinkwrap
     - npm pack
-  environment: release
+  artifacts:
+    paths:
+      untracked: true

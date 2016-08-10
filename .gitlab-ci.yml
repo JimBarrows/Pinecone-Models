@@ -14,8 +14,7 @@ build_dev:
     - npm install
     - npm pack
   artifacts:
-    paths:
-      untracked: true
+    untracked: true
 
 
 build_release:
@@ -26,5 +25,4 @@ build_release:
     - npm shrinkwrap
     - npm pack
   artifacts:
-    paths:
-      untracked: true
+    untracked: true

@@ -7,11 +7,13 @@ const mongoose = require('mongoose'),
       Types    = Schema.Types;
 
 
-var TwitterChannel = new Schema({
+var TwitterAccountInfo = new Schema({
 	accessToken: Types.String,
 	accessTokenSecret: Types.String,
 	name: Types.String,
 	ownerId: Types.String,
 	owner: Types.String
 });
-module.exports     = TwitterChannel;
+
+export default mongoose.model('TwitterAccountInfo', TwitterAccountInfo);
+

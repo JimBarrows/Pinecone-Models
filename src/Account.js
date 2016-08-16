@@ -1,18 +1,29 @@
 'use strict';
-const mongoose              = require('mongoose'),
-      Schema                = mongoose.Schema,
-      Types                 = Schema.Types,
-      passportLocalMongoose = require('passport-local-mongoose'),
-      TwitterChannel        = require("./TwitterChannel");
+import Asset from "./Asset";
+import Destination from "./Destination";
+import FacebookAccountInfo from "./FacebookAccountInfo";
+import Keyword from "./Keyword";
+import Message from "./Message";
+import mongoose from "mongoose";
+import PassportLocalMongoose from "passport-local-mongoose";
+import TwitterAccountInfo from "./TwitterAccountInfo";
+import WordPressAccountInfo from "./WordPressAccountInfo";
+
+const Schema = mongoose.Schema;
 
 
-var Account = new Schema({
-	facebookUserId: Types.String,
-	accessToken: Types.String,
-	expiresIn: Types.Date,
-	twitterChannels: [TwitterChannel]
+export const AccountSchema = new Schema({
+	facebookAccounts: [FacebookAccountInfo],
+	twitterAccounts: [TwitterAccountInfo],
+	wordPressAccounts: [WordPressAccountInfo],
+	messages: [Message],
+	keywords: [Keyword],
+	destinations: [Destination],
+	assets: [Asset]
 });
 
-Account.plugin(passportLocalMongoose);
+AccountSchema.plugin(PassportLocalMongoose);
 
-module.exports = mongoose.model('Account', Account);
+const Account = mongoose.model('Account', AccountSchema);
+
+export default Account;

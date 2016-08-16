@@ -1,9 +1,10 @@
 'use strict';
-const mongoose = require('mongoose'),
-      Schema   = mongoose.Schema,
-      Types    = mongoose.Schema.Types;
+import mongoose from "mongoose";
 
-const WordPressFields = new Schema({
+const Schema = mongoose.Schema,
+      Types  = Schema.Types;
+
+const WordPressFieldsSchema = new Schema({
 	excerpt: Types.String,
 	status: Types.String,
 	format: Types.String,
@@ -12,19 +13,19 @@ const WordPressFields = new Schema({
 	typeToCount: {type: Types.String, enum: ['characters', 'words', 'sentences'], default: 'characters'}
 });
 
-const TwitterFields = new Schema({
+const TwitterFieldsSchema = new Schema({
 	status: Types.String,
 	useTitle: {
 		type: Types.Boolean, default: true
 	}
 });
 
-const FacebookFields = new Schema({
+const FacebookFieldsSchema = new Schema({
 	post: Types.String,
 	useBody: {type: Types.Boolean, default: true}
 });
 
-const TransmissionReport = new Schema({
+const TransmissionReportSchema = new Schema({
 	channel: Types.ObjectId,
 	destination: Types.ObjectId,
 	timeStart: Types.Date,
@@ -34,20 +35,20 @@ const TransmissionReport = new Schema({
 	destinationId: Types.String
 });
 
-const Content = new Schema({
+const ContentSchema = new Schema({
 	body: Types.String,
 	channel: Types.ObjectId,
 	createDate: Types.Date,
-	facebook: FacebookFields,
+	facebook: FacebookFieldsSchema,
 	owner: Types.ObjectId,
 	publishDate: Types.Date,
 	slug: Types.String,
 	title: Types.String,
-	transmissionReports: [TransmissionReport],
-	twitter: TwitterFields,
-	wordPress: WordPressFields
+	transmissionReports: [TransmissionReportSchema],
+	twitter: TwitterFieldsSchema,
+	wordPress: WordPressFieldsSchema
 });
 
-Content.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
+ContentSchema.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
 
-module.exports = mongoose.model('Content', Content);
+export default mongoose.model('Content', ContentSchema);

@@ -15,5 +15,5 @@ var TwitterAccountInfo = new Schema({
 	owner: Types.String
 });
 
-export default mongoose.model('TwitterAccountInfo', TwitterAccountInfo);
+export default TwitterAccountInfo;
 

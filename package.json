@@ -8,7 +8,7 @@
 	"email" : "jim@reallybigtree.com"
   },
   "scripts" : {
-	"test" : "echo \"Error: no test specified\" && exit 1"
+	"test" : "babel-node runSpecs.js"
   },
   "author" : {
 	"name" : "Jim Barrows",
@@ -28,5 +28,8 @@
 	"bluebird" : "^3.4.1",
 	"mongoose" : "^4.5.3",
 	"passport-local-mongoose" : "^4.0.0"
+  },
+  "devDependencies" : {
+	"jasmine" : "^2.4.1"
   }
 }

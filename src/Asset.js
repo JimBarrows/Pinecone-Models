@@ -13,7 +13,7 @@ const Asset = new Schema({
 	size: Types.Number,
 	version: Types.Number,
 	campaignUses: Types.Number,
-	contentUses: types.Number
+	contentUses: Types.Number
 });
 
-export default mongoose.model('Asset', Asset);
+export default Asset;

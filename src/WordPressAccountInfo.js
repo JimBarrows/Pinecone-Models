@@ -10,4 +10,4 @@ const WordPressAccountInfo = new Schema({
 	url: Types.String
 });
 
-export default mongoose.model('WordPressAccountInfo', WordPressAccountInfo);
+export default WordPressAccountInfo;

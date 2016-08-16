@@ -3,10 +3,8 @@ const mongoose = require('mongoose'),
       Schema   = mongoose.Schema,
       Types    = mongoose.Schema.Types;
 
-var Keyword = new Schema({
+export default  new Schema({
 	name: Types.String,
 	campaignUses: Types.Number,
-	contentUses: types.Number
+	contentUses: Types.Number
 });
-
-export default mongoose.model('Keyword', Keyword);

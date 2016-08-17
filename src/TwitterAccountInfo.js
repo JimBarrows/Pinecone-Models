@@ -1,13 +1,10 @@
-/**
- * Created by JimBarrows on 8/6/16.
- */
 'use strict';
-const mongoose = require('mongoose'),
-      Schema   = mongoose.Schema,
-      Types    = Schema.Types;
+import mongoose from "mongoose";
+const Schema = mongoose.Schema,
+      Types  = mongoose.Schema.Types;
 
 
-var TwitterAccountInfo = new Schema({
+const TwitterAccountInfo = new Schema({
 	accessToken: Types.String,
 	accessTokenSecret: Types.String,
 	name: Types.String,

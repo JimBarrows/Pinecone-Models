@@ -9,9 +9,8 @@ import Destination from "./src/Destination";
 import FacebookAccountInfo from "./src/FacebookAccountInfo";
 import Keyword from "./src/Keyword";
 import Message from "./src/Message";
-import TwitterAccountInfo from "./TwitterAccountInfo";
-import WordPressAccountInfo from "./WordPressAccountInfo";
-
+import TwitterAccountInfo from "./src/TwitterAccountInfo";
+import WordPressAccountInfo from "./src/WordPressAccountInfo";
 export {
 		Account,
 		Asset,

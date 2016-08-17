@@ -4,6 +4,7 @@
 'use strict';
 import Account from "./Account";
 import Asset from "./Asset";
+import Campaign from "./Campaign";
 import Content from "./Content";
 import Destination from "./Destination";
 import FacebookAccountInfo from "./FacebookAccountInfo";
@@ -12,14 +13,15 @@ import Message from "./Message";
 import TwitterAccountInfo from "./TwitterAccountInfo";
 import WordPressAccountInfo from "./WordPressAccountInfo";
 module.exports = {
-		Account,
-		Asset,
-		Content,
-		Destination,
-		FacebookAccountInfo,
-		Keyword,
-		Message,
-		TwitterAccountInfo,
-		WordPressAccountInfo
+	Account,
+	Asset,
+	Campaign,
+	Content,
+	Destination,
+	FacebookAccountInfo,
+	Keyword,
+	Message,
+	TwitterAccountInfo,
+	WordPressAccountInfo
 };
 

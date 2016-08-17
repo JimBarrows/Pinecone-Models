@@ -1,36 +1,38 @@
 {
-  "name": "@reallybigtree/pinecone-models",
-  "version": "1.1.1",
-  "description": "Mongoose models for Pincecone",
-  "main": "index.js",
-  "bugs": {
-    "url": "https://gitlab.com/ReallyBigTree/Pinecone-Models/issues",
-    "email": "jim@reallybigtree.com"
+  "name" : "@reallybigtree/pinecone-models",
+  "version" : "1.1.1",
+  "description" : "Mongoose models for Pincecone",
+  "main" : "./distribution/index.js",
+  "bugs" : {
+	"url" : "https://gitlab.com/ReallyBigTree/Pinecone-Models/issues",
+	"email" : "jim@reallybigtree.com"
   },
-  "scripts": {
-    "test": "babel-node runSpecs.js"
+  "scripts" : {
+	"build" : "babel src --presets babel-preset-es2015 --out-dir distribution",
+	"prepublish" : "npm run build",
+	"test" : "babel-node runSpecs.js"
   },
-  "author": {
-    "name": "Jim Barrows",
-    "email": "jim@reallybigtree.com"
+  "author" : {
+	"name" : "Jim Barrows",
+	"email" : "jim@reallybigtree.com"
   },
-  "contributors": [],
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/ReallyBigTree/Pinecone-Models/tree/master"
+  "contributors" : [],
+  "license" : "UNLICENSED",
+  "repository" : {
+	"type" : "git",
+	"url" : "https://gitlab.com/ReallyBigTree/Pinecone-Models/tree/master"
   },
-  "dependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.10.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.11.0",
-    "bluebird": "^3.4.1",
-    "mongoose": "^4.5.3",
-    "passport-local-mongoose": "^4.0.0"
+  "dependencies" : {
+	"babel-cli" : "^6.10.1",
+	"babel-core" : "^6.10.4",
+	"babel-preset-es2015" : "^6.9.0",
+	"babel-preset-stage-2" : "^6.11.0",
+	"bluebird" : "^3.4.1",
+	"mongoose" : "^4.5.3",
+	"passport-local-mongoose" : "^4.0.0"
   },
-  "devDependencies": {
-    "jasmine": "^2.4.1",
-    "jasmine-es6": "^0.2.1"
+  "devDependencies" : {
+	"jasmine" : "^2.4.1",
+	"jasmine-es6" : "^0.2.1"
   }
 }

@@ -26,6 +26,7 @@ const Campaign = new Schema({
 	messages: [Message],
 	name: Types.String,
 	objectives: [Objective],
+	owner: Types.ObjectId,
 	tags: [Tag],
 	twitterAccounts: [TwitterAccountInfo],
 	wordPressAccounts: [WordPressAccountInfo]

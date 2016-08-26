@@ -32,6 +32,10 @@ const Campaign = new Schema({
 	wordPressAccounts: [WordPressAccountInfo]
 });
 
+Campaign.methods.percentageMet = function () {
+	return this.objectives.length > 1 ? this.objectives.reduce((p, c) => p + c.met ? 1 : 0, 0) / this.objectives.length : 0;
+}
+
 Campaign.methods.totalCost = function () {
 	if (this.budgetLineItems && this.budgetLineItems.length > 0) {
 		return this.budgetLineItems.reduce((prev, cur) => prev + cur.total(), 0);

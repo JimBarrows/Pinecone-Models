@@ -7,8 +7,7 @@ const Schema = mongoose.Schema,
 const Objective = new Schema({
 	name: Types.String,
 	description: Types.String,
-	campaignUses: Types.Number,
-	contentUses: Types.Number
+	met: {type: Types.Boolean, default: false}
 });
 
 export default Objective;

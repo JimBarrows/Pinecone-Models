@@ -13,13 +13,13 @@ const Schema = mongoose.Schema;
 
 
 export const AccountSchema = new Schema({
-	facebookAccounts: [FacebookAccountInfo],
-	twitterAccounts: [TwitterAccountInfo],
-	wordPressAccounts: [WordPressAccountInfo],
-	messages: [Message],
-	keywords: [Keyword],
+	assets: [Asset],
 	destinations: [Destination],
-	assets: [Asset]
+	facebookAccounts: [FacebookAccountInfo],
+	keywords: [Keyword],
+	messages: [Message],
+	twitterAccounts: [TwitterAccountInfo],
+	wordPressAccounts: [WordPressAccountInfo]
 });
 
 AccountSchema.plugin(PassportLocalMongoose);

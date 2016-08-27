@@ -6,12 +6,18 @@ const Schema = mongoose.Schema,
 
 const BudgetLineItem = new Schema({
 	name: Types.String,
-	unitCost: Types.Number,
-	quantity: {type: Types.Number, default: 1},
+	estimatedUnitCost: {type: Types.Number, default: 0},
+	estimatedQuantity: {type: Types.Number, default: 1},
+	actualUnitCost: {type: Types.Number, default: 0},
+	actualQuantity: {type: Types.Number, default: 1},
 });
 
-BudgetLineItem.methods.total = function () {
-	return (this.unitCost * this.quantity)
+BudgetLineItem.methods.estimatedTotal = function () {
+	return (this.estimatedUnitCost * this.estimatedQuantity)
+}
+
+BudgetLineItem.methods.actualTotal = function () {
+	return (this.actualUnitCost * this.actualQuantity)
 }
 
 export default BudgetLineItem;

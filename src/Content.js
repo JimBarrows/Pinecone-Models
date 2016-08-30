@@ -46,9 +46,7 @@ const ContentSchema = new Schema({
 	title: Types.String,
 	transmissionReports: [TransmissionReportSchema],
 	twitter: TwitterFieldsSchema,
-	wordPress: WordPressFieldsSchema
+	wordpress: WordPressFieldsSchema
 });
-
-ContentSchema.methods.failedTransmissionReportsFor = (channelId) => this.transmissionReports.filter((report) => report.channel === channelId && report.status === 'failure');
 
 export default mongoose.model('Content', ContentSchema);

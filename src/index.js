@@ -11,7 +11,7 @@ import FacebookAccountInfo from "./FacebookAccountInfo";
 import Keyword from "./Keyword";
 import Message from "./Message";
 import TwitterAccountInfo from "./TwitterAccountInfo";
-import WordPressAccountInfo from "./WordPressAccountInfo";
+import WordPressAccountInfo from "./WordpressAccountInfo";
 module.exports = {
 	Account,
 	Asset,

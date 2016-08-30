@@ -9,7 +9,7 @@ import Message from "./Message";
 import Objective from "./Objective";
 import Tag from "./Tag";
 import TwitterAccountInfo from "./TwitterAccountInfo";
-import WordPressAccountInfo from "./WordPressAccountInfo";
+import WordPressAccountInfo from "./WordpressAccountInfo";
 
 
 const Schema = mongoose.Schema,

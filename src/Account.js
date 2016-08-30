@@ -7,7 +7,7 @@ import Message from "./Message";
 import mongoose from "mongoose";
 import PassportLocalMongoose from "passport-local-mongoose";
 import TwitterAccountInfo from "./TwitterAccountInfo";
-import WordPressAccountInfo from "./WordPressAccountInfo";
+import WordpressAccountInfo from "./WordpressAccountInfo";
 
 const Schema = mongoose.Schema;
 
@@ -19,7 +19,7 @@ export const AccountSchema = new Schema({
 	keywords: [Keyword],
 	messages: [Message],
 	twitterAccounts: [TwitterAccountInfo],
-	wordPressAccounts: [WordPressAccountInfo]
+	wordpressAccounts: [WordpressAccountInfo]
 });
 
 AccountSchema.plugin(PassportLocalMongoose);

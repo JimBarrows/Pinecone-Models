@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema,
       Types  = mongoose.Schema.Types;
 
-const WordPressAccountInfo = new Schema({
+const WordpressAccountInfo = new Schema({
 	name: Types.String,
 	username: Types.String,
 	password: Types.String,
 	url: Types.String
 });
 
-export default WordPressAccountInfo;
+export default WordpressAccountInfo;

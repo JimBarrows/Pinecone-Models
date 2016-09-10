@@ -7,7 +7,7 @@ const PageInfo = new Schema({
 	accessToken: Types.String,
 	category: Types.String,
 	name: Types.String,
-	id: Types.String
+	pageId: Types.String
 });
 
 const FacebookAccountInfo = new Schema({

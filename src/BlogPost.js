@@ -1,5 +1,6 @@
 'use strict';
 import mongoose from "mongoose";
+import WordpressAccountInfo from "./WordpressAccountInfo";
 
 const Schema = mongoose.Schema,
       Types  = Schema.Types;
@@ -10,7 +11,8 @@ const WordPressFieldsSchema = new Schema({
 	format: Types.String,
 	useBody: {type: Types.Boolean, default: true},
 	count: {type: Types.Number, default: 140},
-	typeToCount: {type: Types.String, enum: ['characters', 'words', 'sentences'], default: 'characters'}
+	typeToCount: {type: Types.String, enum: ['characters', 'words', 'sentences'], default: 'characters'},
+	wordPressAccounts: [WordpressAccountInfo]
 });
 
 const TwitterFieldsSchema = new Schema({
@@ -35,7 +37,7 @@ const TransmissionReportSchema = new Schema({
 	destinationId: Types.String
 });
 
-const ContentSchema = new Schema({
+const BlogPostSchema = new Schema({
 	body: Types.String,
 	campaign: Types.ObjectId,
 	createDate: Types.Date,
@@ -49,4 +51,4 @@ const ContentSchema = new Schema({
 	wordpress: WordPressFieldsSchema
 });
 
-export default mongoose.model('Content', ContentSchema);
+export default BlogPostSchema;

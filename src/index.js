@@ -5,7 +5,7 @@
 import Account from "./Account";
 import Asset from "./Asset";
 import Campaign from "./Campaign";
-import Content from "./Content";
+import BlogPost from "./BlogPost";
 import Destination from "./Destination";
 import FacebookAccountInfo from "./FacebookAccountInfo";
 import Keyword from "./Keyword";
@@ -16,7 +16,7 @@ module.exports = {
 	Account,
 	Asset,
 	Campaign,
-	Content,
+	BlogPost,
 	Destination,
 	FacebookAccountInfo,
 	Keyword,

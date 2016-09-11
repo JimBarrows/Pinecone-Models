@@ -1,5 +1,6 @@
 'use strict';
 import Asset from "./Asset";
+import BlogPost from "./BlogPost";
 import BudgetLineItem from "./BudgetLineItem";
 import Destination from "./Destination";
 import FacebookAccountInfo from "./FacebookAccountInfo";
@@ -17,6 +18,7 @@ const Schema = mongoose.Schema,
 
 const Campaign = new Schema({
 	assets: [Asset],
+	blogPosts: [BlogPost],
 	budgetLineItems: [BudgetLineItem],
 	destinations: [Destination],
 	effectiveFrom: Types.Date,

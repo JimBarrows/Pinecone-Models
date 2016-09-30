@@ -39,7 +39,6 @@ const TransmissionReportSchema = new Schema({
 
 const BlogPostSchema = new Schema({
 	body: Types.String,
-	campaign: Types.ObjectId,
 	createDate: Types.Date,
 	facebook: FacebookFieldsSchema,
 	owner: Types.ObjectId,

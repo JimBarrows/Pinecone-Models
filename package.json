@@ -1,6 +1,6 @@
 {
   "name": "@reallybigtree/pinecone-models",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Mongoose models for Pincecone",
   "main": "./distribution/index.js",
   "bugs": {

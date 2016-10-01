@@ -11,4 +11,4 @@ const Tag = new Schema({
 	contentUses: Types.Number
 });
 
-export default mongoose.model('Tag', Tag);
+export default Tag;

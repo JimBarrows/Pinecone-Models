@@ -11,7 +11,6 @@ import WordpressAccountInfo from "./WordpressAccountInfo";
 
 const Schema = mongoose.Schema;
 
-
 export const AccountSchema = new Schema({
 	assets: [Asset],
 	destinations: [Destination],

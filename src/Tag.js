@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 import mongoose from "mongoose";
 const Schema = mongoose.Schema,
       Types  = mongoose.Schema.Types;

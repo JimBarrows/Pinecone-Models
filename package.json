@@ -1,26 +1,32 @@
 {
-  "name": "@reallybigtree/pinecone-models",
+  "name": "pinecone-models",
   "version": "1.4.2",
   "description": "Mongoose models for Pincecone",
   "main": "./distribution/index.js",
   "bugs": {
-    "url": "https://gitlab.com/ReallyBigTree/Pinecone-Models/issues",
-    "email": "jim@reallybigtree.com"
+    "url": "https://github.com/JimBarrows/Pinecone-Models/issues"
   },
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir distribution",
-    "prepublish": "npm run build",
-    "test": "babel-node runSpecs.js"
+    "docker:push": "docker push registry.gitlab.com/reallybigtree/pinecone-Models",
+    "docker:build": "docker build -t registry.gitlab.com/reallybigtree/pinecone-Models .",
+    "docker:run": "docker run --detach --name pinecone-Models --label=traefik.backend=Models --label=traefik.port=8080 --link pinecone-server:server registry.gitlab.com/reallybigtree/pinecone-Models",
+    "package": "webpack",
+    "start": "webpack-dev-server --hot --inline",
+    "test": "wdio wdio.conf.js",
+    "test:webdriver:start": "webdriver-manager start",
+    "test:update-webdriver": "webdriver-manager update",
+    "predocker:build": "npm run pinecone:Models:package"
   },
   "author": {
     "name": "Jim Barrows",
-    "email": "jim@reallybigtree.com"
+    "email": "Jim.Barrows@gmail.com"
   },
   "contributors": [],
-  "license": "UNLICENSED",
+  "license": "Apache 2.0",
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/ReallyBigTree/Pinecone-Models/tree/master"
+    "url": "git@github.com:JimBarrows/Pinecone-Models.git"
   },
   "dependencies": {
     "babel-cli": "^6.10.1",
